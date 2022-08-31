@@ -49,6 +49,14 @@ const rooms=[
     }]
 }
 ]
+
+const msg="<div><h1>Welcome to Hall Booking API</h1><p>1. Create Room (/createRoom)</p><p>2. Book Room (/bookRoom)</p><p>3. List the customers (/listCustomer)</p><p>4. List of Rooms (/listRooms)</p></div>"
+
+app.get('/', function (req, res) {
+    res.send(`${msg}`);
+  })
+
+
 //create room
 app.post("/createRoom",(req,res)=>{
 
