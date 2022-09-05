@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon index.js"
   },
-  "author": "prasanth",
+  "author": "ranjeeth",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.2",

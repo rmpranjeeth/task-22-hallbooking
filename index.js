@@ -9,11 +9,11 @@ const rooms=[
   {
       name:"Normal",
       seats:200,
-      amenities:"wifi,projection screen,water",
+      amenities:"wifi,parking,water",
       price:1500,
       roomId:"101",
       bookingDetails:[{
-          customerName:"Prasanth",
+          customerName:"ranjeeth",
           date:new Date("2022-08-31"),
           start:"07:00",
           end:"10:00",
@@ -23,11 +23,11 @@ const rooms=[
   {
       name:"Premium",
       seats:150,
-      amenities:"wifi,projection screen,water,AC",
+      amenities:"wifi,swimming pool,water,AC",
       price:2500,
       roomId:"102",
       bookingDetails:[{
-          customerName:"Pravin",
+          customerName:"varun",
           date:new Date("2022-08-31"),
           start:"15:00",
           end:"17:00",
@@ -35,13 +35,13 @@ const rooms=[
       }]
   },
   {
-    name:"Royal",
+    name:"Suit-room",
     seats:250,
-    amenities:"wifi,projection screen,water,AC",
+    amenities:"wifi,private pool,water,AC",
     price:3500,
     roomId:"102",
     bookingDetails:[{
-        customerName:"Vini",
+        customerName:"amisha",
         date:new Date("2022-08-31"),
         start:"18:00",
         end:"22:00",
@@ -50,10 +50,9 @@ const rooms=[
 }
 ]
 
-const msg="<div><h1>Welcome to Hall Booking API</h1><p>1. Create Room (/createRoom)</p><p>2. Book Room (/bookRoom)</p><p>3. List the customers (/listCustomer)</p><p>4. List of Rooms (/listRooms)</p></div>"
 
 app.get('/', function (req, res) {
-    res.send(`${msg}`);
+    res.send(`Welcome to Hall Booking API`);
   })
 
 
@@ -142,7 +141,7 @@ app.get("/listRooms",(req,res)=>{
   res.send(rooms)
 })
 
-  const PORT= process.env.PORT || 5000;
+  const PORT= process.env.PORT || 9000;
   app.listen(PORT, ()=>{
       console.log(`server is running on ${PORT}`)
   })
